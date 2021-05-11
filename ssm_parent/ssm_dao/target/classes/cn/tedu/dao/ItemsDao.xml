@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<!--
+    namespace="Dao接口的全限定名"
+-->
+<mapper namespace="cn.tedu.dao.ItemsDao">
+
+    <!--保存操作-->
+    <insert id="save" parameterType="cn.tedu.pojo.Items">
+        INSERT  INTO items(name,price,pic,createtime,detail) VALUES(#{name},#{price},#{pic},#{createtime},#{detail})
+    </insert>
+
+    <!--查询所有 【注意】这里用的是resultType，不是resultMap -->
+    <select id="findAll" resultType="cn.tedu.pojo.Items">
+        SELECT * FROM  items
+    </select>
+
+    <select id="findById" resultType="cn.tedu.pojo.Items">
+        SELECT * FROM  items where id=#{id}
+    </select>
+
+</mapper>
