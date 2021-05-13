@@ -1,0 +1,9 @@
+操作t_operator_user 表  三个字段 id loginname password
+
+要求
+
+​	使用mybatis-plus
+
+​	password使用密文传输
+
+​	简单的登录页面
