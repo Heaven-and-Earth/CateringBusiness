@@ -1,5 +1,7 @@
 package com.cbm.operator;
 
+import org.springframework.boot.SpringApplication;
+
 /**
  * @ClassName OperatorCenterApplication
  * @Description TODO
@@ -7,4 +9,8 @@ package com.cbm.operator;
  * @Version 1.0
  */
 public class OperatorCenterApplication {
+    public static void main(String[] args) {
+        SpringApplication.run(OperatorCenterApplication.class, args);
+    }
+
 }
