@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile default="true" name="Default" enabled="true" />
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="restManager_operator_api" />
+        <module name="restManager_operator" />
+        <module name="restManager_operator_web" />
+        <module name="restManager_service_common" />
+        <module name="restManager_web_common" />
+        <module name="restManager_common" />
+      </profile>
+    </annotationProcessing>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="restManager_common" options="-parameters" />
+      <module name="restManager_operator" options="-parameters" />
+      <module name="restManager_operator_api" options="-parameters" />
+      <module name="restManager_operator_web" options="-parameters" />
+      <module name="restManager_service" options="-parameters" />
+      <module name="restManager_service_common" options="-parameters" />
+      <module name="restManager_web" options="-parameters" />
+      <module name="restManager_web_common" options="-parameters" />
+    </option>
+  </component>
+</project>
