@@ -13,6 +13,7 @@
         <module>restManager_service</module>
         <module>restManager_web</module>
         <module>restManager_web</module>
+        <module>restManager_gateway</module>
     </modules>
 
     <!-- Spring boot 版本信息 -->

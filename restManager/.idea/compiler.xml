@@ -7,18 +7,20 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="restManager_operator_api" />
         <module name="restManager_operator" />
         <module name="restManager_operator_web" />
-        <module name="restManager_service_common" />
+        <module name="restManager_gateway" />
         <module name="restManager_web_common" />
         <module name="restManager_common" />
+        <module name="restManager_operator_api" />
+        <module name="restManager_service_common" />
       </profile>
     </annotationProcessing>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="restManager_common" options="-parameters" />
+      <module name="restManager_gateway" options="-parameters" />
       <module name="restManager_operator" options="-parameters" />
       <module name="restManager_operator_api" options="-parameters" />
       <module name="restManager_operator_web" options="-parameters" />
