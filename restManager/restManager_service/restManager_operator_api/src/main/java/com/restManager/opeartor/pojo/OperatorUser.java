@@ -24,11 +24,11 @@ public class OperatorUser implements Serializable {
     @TableId(type = IdType.ASSIGN_ID)
     private String uid;
 
-    @ApiModelProperty(value = "登录账号")
+    @ApiModelProperty(value = "用户名")
     @TableField(value = "loginname") //自动映射：1）字段与属性名称相同 2）login_name -> loginName
     private String loginname;
 
-    @ApiModelProperty(value = "登录密码")
+    @ApiModelProperty(value = "用户密码")
     @TableField(value = "loginpass")
     @JsonIgnore
     private String loginpass;
