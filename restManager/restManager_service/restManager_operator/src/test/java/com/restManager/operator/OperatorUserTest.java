@@ -2,6 +2,7 @@ package com.restManager.operator;
 
 import com.restManager.opeartor.pojo.OperatorUser;
 import com.restManager.opeartor.service.OperatorUserService;
+import com.restManager.utils.MD5CryptUtil;
 import org.apache.commons.codec.digest.Md5Crypt;
 import org.apache.dubbo.config.annotation.Reference;
 import org.junit.Test;
@@ -27,10 +28,11 @@ public class OperatorUserTest {
     @Rollback(false)
     public void addTest(){
         OperatorUser operatorUser = new OperatorUser();
-        operatorUser.setLoginname("wangwu");
+        operatorUser.setLoginname("小昭");
         //operatorUser.setLoginpass("123456");
         String crypt = Md5Crypt.md5Crypt("123456".getBytes());
         operatorUser.setLoginpass(crypt);
         operatorUserService.save(operatorUser);
     }
+
 }

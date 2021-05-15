@@ -5,7 +5,9 @@ import com.baomidou.mybatisplus.core.metadata.IPage;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.restManager.opeartor.pojo.OperatorUser;
 import com.restManager.opeartor.service.OperatorUserService;
+import com.restManager.opeartor.vo.LoginVO;
 import com.restManager.response.vo.PageVO;
+import com.restManager.utils.Result;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiImplicitParam;
 import io.swagger.annotations.ApiImplicitParams;
@@ -14,10 +16,7 @@ import lombok.extern.slf4j.Slf4j;
 import org.apache.dubbo.config.annotation.Reference;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.cloud.context.config.annotation.RefreshScope;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 /**
  * 管理员的登录接口
@@ -83,5 +82,27 @@ public class UserController{
         return pageVO;
     }
 
+    //登录
+    @ApiOperation("登录")
+    @PostMapping("/login")
+    @ApiImplicitParam(name = "Authorization", value = "jwt token", required = false, dataType = "String",paramType="header")
+    public Result login(@RequestBody LoginVO loginVO){
+        return operatorUserService.login(loginVO.getLoginName(),loginVO.getLoginPass());
+    }
+
 
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
