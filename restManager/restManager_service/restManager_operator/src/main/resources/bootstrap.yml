@@ -11,5 +11,6 @@ spring:
         server-addr: 120.27.128.89:8848
         file-extension: yml
         prefix: operator-dubbo-provider
+        #加载通用配置
         shared-dataids: common.yml
         refreshable-dataids: common.yml
